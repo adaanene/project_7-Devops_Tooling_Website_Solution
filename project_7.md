@@ -69,7 +69,7 @@ Spin up four EC2 instances and name them as follows:
 
 1. Install MySQL on the Ubuntu server and create a database named **tooling** 
 
-2. Create a user with full privileges over the tooling database. Allow access for the user only from the webservers *subnet cdir*
+2. Create a user with full privileges over the tooling database. Allow access for the user only from the web servers *subnet cdir*
 
 
 ## SET UP WEB SERVERS

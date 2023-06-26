@@ -144,6 +144,12 @@ Complete steps 1-4 on web1 and web2
     **note**  If you encounter 403 Error – check permissions to your /var/www/html folder and also disable SELinux `sudo setenforce 0`. 
     To make this change permanent – open following config file `sudo vi /etc/sysconfig/selinux` and set `SELINUX=disabled` then restart httpd.
 
+            ```
+            # to change permissions for /var/www/html
+            sudo find -type f -exec chmod 644 {} +
+            sudo find -type d -exec chmod 755 {} +
+            ```
+
     ![login](./images/login_page.png)
 
 12. Install MySQL server on the web server `sudo yum install mysql-server`

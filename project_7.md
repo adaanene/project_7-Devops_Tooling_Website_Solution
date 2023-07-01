@@ -1,6 +1,6 @@
 # DEVOPS TOOLING WEBSITE SOLUTION
 
-Scope: to implement a tooling website solution using NFS server, Web Servers, and MySQL. This project is then continued in project 8
+Scope: to implement a tooling website solution using NFS server, Web Servers, and MySQL. 
 
 Spin up four EC2 instances and name them as follows:
 

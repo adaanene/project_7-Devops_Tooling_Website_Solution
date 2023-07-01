@@ -57,7 +57,7 @@ Scope: to automate continuous integration (CI) with Jenkins. To configure a job 
 
 ## CONFIGURE JENKINS TO RETRIEVE GITHUB SOURCE CODES USING WEBHOOKS
 
-1. Go to your Github settings page and enable webhooks
+1. Go to your GitHub settings page and enable webhooks
 
     ![webhooks](./screenshots_9/webhook_github.gif)
 
@@ -67,7 +67,7 @@ Scope: to automate continuous integration (CI) with Jenkins. To configure a job 
 
     - click on "configure" then under "Source code management" select "Git"
 
-    - enter your Tooling GitHub repository URL and add the credentials to your Github account
+    - enter your Tooling GitHub repository URL and add the credentials for your GitHub account
 
         ![add_url](./screenshots_9/add_github_url_and_password.png)
 
@@ -85,16 +85,16 @@ Scope: to automate continuous integration (CI) with Jenkins. To configure a job 
 
         ![archive_artifacts](./screenshots_9/archive_artifacts.gif)
 
-6. Now if you change any file within your GitHub repository and push to the main branch, webhook will automatically begin a new job and save the artifacts locally on Jenkins server
+6. Now if you change any file within your GitHub repository and push to the main branch, webhook will automatically begin a new job and save the job artifacts locally on Jenkins server
 
     ![status_job](./screenshots_9/status_job.png)
 
-    Artifacts are stored in `/var/lib/jenkins/jobs/tooling_github/builds/<build_number>/archive/` in the Jenkins server
+    Artifacts are stored in `/var/lib/jenkins/jobs/<job_name>/builds/<build_number>/archive/` in the Jenkins server
 
 
 ## CONFIGURE JENKINS TO COPY FILES TO NFS SERVER VIA SSH
 
-1. On the Jenkins web console go to dashboard and click on "Manage Jenkins" then "Plugins".
+1. On the Jenkins web console go to dashboard and click on "Manage Jenkins", then "Plugins"
 
     Select "Available plugins" and search for the `Publish Over SSH` plugin and install it without restart
 
@@ -126,7 +126,7 @@ Scope: to automate continuous integration (CI) with Jenkins. To configure a job 
     ![console_output](./screenshots_9/transfer_%20console_otuput.png)
 
 
-    If you get a "permission denied" error message in console output then you may have to change permissions for `/mnt/apps`
+    If you get a "permission denied" error message in console output, then you may have to change permissions for `/mnt/apps`
 
     ![unstable](./screenshots_9/build_error_permission.png)
 

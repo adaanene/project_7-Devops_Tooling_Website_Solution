@@ -73,7 +73,7 @@ Scope: to automate continuous integration (CI) with Jenkins. To configure a job 
 
     - under "branches to build" change the branch specifier to ` */main ` then save your configuration
 
-4. Click on "build now" to test your build. If everything was done correctly you will see in the Build history section the build under `#1` with a green tick next to it
+4. Click on "build now" to test your build - if everything was done correctly you will see in the Build history section the build under `#1` with a green tick next to it
 
 5. Now to use webhooks go back to the freestyle job configuration page and add the following:
 
@@ -94,15 +94,15 @@ Scope: to automate continuous integration (CI) with Jenkins. To configure a job 
 
 ## CONFIGURE JENKINS TO COPY FILES TO NFS SERVER VIA SSH
 
-1. On the Jenkins web console go to dashboard and click on "Manage Jenkins", then "Plugins"
+1. On the Jenkins web console go to dashboard and click on "Manage Jenkins", then "Plugins".
 
     Select "Available plugins" and search for the `Publish Over SSH` plugin and install it without restart
 
 2. Go back to "Manage Jenkins" menu and click on "System"
 
-3. Set up a configuration for your job to copy artifacts to  NFS server 
+3. Set up a configuration for the job to copy artifacts to  NFS server.
 
-    Scroll down to the "Publish over SSH" section and configure it to connect to the NFS server
+    Scroll down to the "Publish over SSH" section and configure it to connect to the NFS server.
 
     Enter the following: 
     - the content of the private key for your NFS server
@@ -111,7 +111,7 @@ Scope: to automate continuous integration (CI) with Jenkins. To configure a job 
     - a username (the username to connect with - in this case `ec2-user` since the NFS server runs on RHEL8)
     - a remote directory: `/mnt/apps` on NFS server, since this directory is mount point for the web servers to fetch files from the NFS server
 
-4. Click on "Test configuration" and ensure it is successful then save it. For this to work TCP port 22 must be open on the NFS server so it can receive SSH connections
+4. Click on "Test configuration" and ensure it is successful, then save it. For this to work TCP port 22 must be open on the NFS server so it can receive SSH connections
 
 5. Go to the freestyle job configuration page and add post-build action to "Send build artifacts over SSH"
 
@@ -119,7 +119,7 @@ Scope: to automate continuous integration (CI) with Jenkins. To configure a job 
 
     ![send_artifacts](./screenshots_9/send_artifacts_over_ssh.png)
 
-6. Now test the configuration. Change a file in README.md (or any file) in your GitHub repository and commit. 
+6. Now test the configuration - change a file in README.md (or any file) in your GitHub repository and commit.
 
     A new job will be started by webhook and once successful the console output of the job will show something like this
 
@@ -142,5 +142,5 @@ Scope: to automate continuous integration (CI) with Jenkins. To configure a job 
 
     `cat /mnt/apps/README.md`
 
-    If you see the changes you made then everything works perfectly
+    If you see the changes you made then everything works perfectly.
 

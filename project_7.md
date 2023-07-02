@@ -117,8 +117,6 @@ Complete steps 1-4 on web1 and web2
 
 5.  In order for NFS server to be accessible from your client, you must also open following ports: TCP 111, UDP 111, UDP 2049, for extra security allow access only from subnet cdir
 
-    ![ports](./images/ports.png)
-
 6. Go to /var/www and verify that the Apache html folder and files are present. You should see the same in /mnt/apps of the NFS server, if mounted correctly. You can try to create a new file `touch test.txt` from one server and check if the same file is accessible from other Web Server.
 
 7. Mount the log folder for Apache (var/log/httpd) on one web server to the NFS server's export for logs /mnt/logs. Add a new entry in fstab file 

@@ -72,7 +72,7 @@ Scope: to set up and configure load balancer to distribute incoming traffic to t
 
     The load balancer configuration file then becomes this
 
-    ![config_file](./images/load_balancer_config_file.png)
+    ![config_file](./screenshots_8/load_balancer_config_file.png)
 
 
 5. In project 7 you mounted `/var/log/httpd` from both web servers to the NFS server's /mnt/logs - unmount them with `sudo umount -f /var/log/httpd`
@@ -86,4 +86,4 @@ Scope: to set up and configure load balancer to distribute incoming traffic to t
 7. Run `sudo tail -f /var/log/httpd/access_log
 ` for each web server to check each server's log file - if you refresh your browser on the LB's page you will see new records appearing in the log file
     
-    ![log](./images/logs_for_web.png)
+    ![log](./screenshots_8/logs_for_web.png)

@@ -117,6 +117,8 @@ Complete steps 1-4 on web1 and web2
 
 5.  In order for NFS server to be accessible from your client, you must also open following ports: TCP 111, UDP 111, UDP 2049, for extra security allow access only from subnet cdir
 
+    ![ports](./screenshots_7/ports.png
+)
 6. Go to /var/www and verify that the Apache html folder and files are present. You should see the same in /mnt/apps of the NFS server, if mounted correctly. You can try to create a new file `touch test.txt` from one server and check if the same file is accessible from other Web Server.
 
 7. Mount the log folder for Apache (var/log/httpd) on one web server to the NFS server's export for logs /mnt/logs. Add a new entry in fstab file 
@@ -126,6 +128,8 @@ Complete steps 1-4 on web1 and web2
     sudo vi /etc/fstab
     <NFS-Server-Private-IP-Address>:/mnt/logs /var/log/httpd nfs defaults 0 0
     ```
+
+    ![mounst](./screenshots_7/mounts.png)
 
 8. Install git on the web server `sudo yum install git`
 
@@ -146,13 +150,13 @@ Complete steps 1-4 on web1 and web2
             sudo find -type d -exec chmod 755 {} +
             ```
 
-    ![login](./images/login_page.png)
+    ![login](./screenshots_7/login_page.png)
 
 12. Install MySQL server on the web server `sudo yum install mysql-server`
 
 13. Open the /var/www/html/functions.php file and update it with the login details for the database 
 
-    ![login_dets](./images/login_details.png)
+    ![login_dets](./screenshots_7/login_details.png)
 
 14. Apply tooling-db.sql script to your database using this command `mysql -h <databse-private-ip> -u <db-username> -p tooling < tooling-db.sql`
 
@@ -162,4 +166,4 @@ Complete steps 1-4 on web1 and web2
 
 16. make sure you can login into the tooling website with **myuser**
 
-    ![website](./images/after_login.png)
+    ![website](./screenshots_7/after_login.png)

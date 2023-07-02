@@ -86,8 +86,6 @@ Complete steps 1-4 on web1 and web2
     df -h # verify that NFS was mounted successfully
     ```
 
-    ![mount_nfs](./images/mounts.png)
-
 3. add a new entry in the fstab file so that the mount will persist after reboot
 
     ```

@@ -4,7 +4,7 @@ Scope: to automate continuous integration (CI) with Jenkins. To configure a job 
 
 ## INSTALL AND CONFIGURE JENKINS SERVER
 
-1. Spin up an EC2 instance of Ubuntu server and name it 'Jenkins'
+1. Spin up an EC2 instance of Ubuntu 20.04 LTS and name it 'Jenkins'
 
 2. Install the Java Development Kit (JDK) to work with Jenkins 
 
